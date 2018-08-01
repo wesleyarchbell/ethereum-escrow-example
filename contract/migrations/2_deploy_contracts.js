@@ -1,5 +1,5 @@
 var approvalContract = artifacts.require("ApprovalContract")
 
 module.exports = function(deployer) {
-    deployer.deploy(approvalContract);
+    deployer.deploy(approvalContract).then(() => console.log("CONTRACT ADDRESS: " + approvalContract.address));
 }
